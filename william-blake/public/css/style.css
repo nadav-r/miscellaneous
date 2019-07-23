@@ -1,0 +1,33 @@
+body {
+    margin:0;
+    background-color: #303030;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.site-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+    color:antiquewhite;
+    line-height: 1.6rem;
+}
+
+header {
+    background-color: antiquewhite;
+    text-align:center;
+    margin-bottom: 16px;
+    padding: 16px 0;
+    color:#303030;
+}
+header a {
+    margin-right:16px;
+    text-decoration: none;
+    color:black;
+}
+
+p{
+    max-width: 100ch;
+    margin:auto;
+}
