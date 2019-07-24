@@ -12,6 +12,7 @@ body {
     margin: auto;
     color:antiquewhite;
     line-height: 1.6rem;
+    
 }
 
 header {
@@ -28,6 +29,11 @@ header a {
 }
 
 p{
+    flex-grow: 0.5;
     max-width: 100ch;
     margin:auto;
+}
+
+img#signature {
+    width: 550px;   
 }

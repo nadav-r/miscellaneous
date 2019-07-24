@@ -54,37 +54,40 @@ def is_anagram(s1, s2):
     s2 = s2.replace(' ', '')
     s1 = s1.lower()
     s2 = s2.lower()
-    dict_1 = dict.fromkeys(list(s1),0)
-    dict_2 = dict.fromkeys(list(s2),0)
+    dict_1 = dict.fromkeys(list(s1), 0)
+    dict_2 = dict.fromkeys(list(s2), 0)
     for ch in s1:
-        dict_1[ch]+=1
+        dict_1[ch] += 1
     for ch in s2:
-        dict_2[ch]+=1
-    print(dict_1==dict_2)
-    
-#is_anagram('abc', 'cbaa')
+        dict_2[ch] += 1
+    print(dict_1 == dict_2)
+
+# is_anagram('abc', 'cbaa')
 
 
-'''
-Your job is to write a function which increments a string, to create a new string.
+def count_hi(str):
+    i = 0
+    count = 0
+    while i < len(str):
+        temp_i = 0
+        try:
+            temp_i = str.index("hi", i)
+        except:
+            return count
+        else:
+            count += 1
+        i = temp_i + 2
+    return count
 
-If the string already ends with a number, the number should be incremented by 1.
-If the string does not end with a number. the number 1 should be appended to the new string.
-Examples:
+#print(count_hi('   hihi_hi+-hi'))
 
-foo -> foo1
 
-foobar23 -> foobar24
-
-foo0042 -> foo0043
-
-foo9 -> foo10
-
-foo099 -> foo100
-
-Attention: If the number has leading zeros the amount of digits should be considered.
-
-'''
-
-def increment_string(strng):
-    
+def cat_dog(str):
+    cats_count = 0
+    dogs_count = 0
+    for i in range(len(str)-2):
+        if str[i:i+3] == 'cat':
+            cats_count += 1
+        elif str[i:i+3] == 'dog':
+            dogs_count += 1
+    return dogs_count == cats_count
