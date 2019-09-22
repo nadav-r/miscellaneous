@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href={{url_for('static', filename='../static/css/styles.css')}}>
-    <title>Elections</title>
-</head>
-
-<body>
     <div class='container'>
+        <p>Overview</p>
         <div>
             {{albums.to_html() | safe}}
         </div>
@@ -28,10 +20,9 @@
             <input type="radio" name="table" value="artists"> artists<br>
             <input type="submit" value="Submit">
         </form>
-    </div>
+   
     {% if table is defined %}
      {{table.to_html() | safe}}
     {% endif %}
-</body>
-
-</html>
+    {% endblock %}
+</div>
