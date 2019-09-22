@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class = 'container'>
+    <div class='container'>
         <div>
             {{albums.to_html() | safe}}
         </div>
@@ -21,6 +21,17 @@
             {{tracks.to_html() | safe}}
         </div>
     </div>
+    <div>
+        <form action="/" method="POST">
+            <input type="radio" name="table" value="albums"> albums<br>
+            <input type="radio" name="table" value="tracks"> tracks<br>
+            <input type="radio" name="table" value="artists"> artists<br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    {% if table is defined %}
+     {{table.to_html() | safe}}
+    {% endif %}
 </body>
 
 </html>
